@@ -1,0 +1,8 @@
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\04.LAB.VolumeOfPyramid\bin\Debug\04.LAB.VolumeOfPyramid.exe.config
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\04.LAB.VolumeOfPyramid\bin\Debug\04.LAB.VolumeOfPyramid.exe
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\04.LAB.VolumeOfPyramid\bin\Debug\04.LAB.VolumeOfPyramid.pdb
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\04.LAB.VolumeOfPyramid\obj\Debug\04.LAB.VolumeOfPyramid.exe
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\04.LAB.VolumeOfPyramid\obj\Debug\04.LAB.VolumeOfPyramid.pdb
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\TechModuleC-\02.DataTypesTextAndOtherTypesVariables\04.LAB.VolumeOfPyramid\bin\Debug\04.LAB.VolumeOfPyramid.exe.config
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\TechModuleC-\02.DataTypesTextAndOtherTypesVariables\04.LAB.VolumeOfPyramid\obj\Debug\04.LAB.VolumeOfPyramid.exe
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\TechModuleC-\02.DataTypesTextAndOtherTypesVariables\04.LAB.VolumeOfPyramid\obj\Debug\04.LAB.VolumeOfPyramid.pdb

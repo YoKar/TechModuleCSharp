@@ -1,0 +1,8 @@
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\05.LAB.RefactSpecNumbers\bin\Debug\05.LAB.RefactSpecNumbers.exe.config
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\05.LAB.RefactSpecNumbers\bin\Debug\05.LAB.RefactSpecNumbers.exe
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\05.LAB.RefactSpecNumbers\bin\Debug\05.LAB.RefactSpecNumbers.pdb
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\05.LAB.RefactSpecNumbers\obj\Debug\05.LAB.RefactSpecNumbers.exe
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\05.LAB.RefactSpecNumbers\obj\Debug\05.LAB.RefactSpecNumbers.pdb
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\TechModuleC-\02.DataTypesTextAndOtherTypesVariables\05.LAB.RefactSpecNumbers\bin\Debug\05.LAB.RefactSpecNumbers.exe.config
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\TechModuleC-\02.DataTypesTextAndOtherTypesVariables\05.LAB.RefactSpecNumbers\obj\Debug\05.LAB.RefactSpecNumbers.exe
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\TechModuleC-\02.DataTypesTextAndOtherTypesVariables\05.LAB.RefactSpecNumbers\obj\Debug\05.LAB.RefactSpecNumbers.pdb

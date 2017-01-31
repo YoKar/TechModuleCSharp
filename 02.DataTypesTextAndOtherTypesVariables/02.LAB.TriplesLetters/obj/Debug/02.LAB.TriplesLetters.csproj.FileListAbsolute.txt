@@ -1,0 +1,9 @@
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\02.LAB.TriplesLetters\bin\Debug\02.LAB.TriplesLetters.exe.config
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\02.LAB.TriplesLetters\bin\Debug\02.LAB.TriplesLetters.exe
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\02.LAB.TriplesLetters\bin\Debug\02.LAB.TriplesLetters.pdb
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\02.LAB.TriplesLetters\obj\Debug\02.LAB.TriplesLetters.csprojResolveAssemblyReference.cache
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\02.LAB.TriplesLetters\obj\Debug\02.LAB.TriplesLetters.exe
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\02.DataTypesTextAndOtherTypesVariables\02.LAB.TriplesLetters\obj\Debug\02.LAB.TriplesLetters.pdb
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\TechModuleC-\02.DataTypesTextAndOtherTypesVariables\02.LAB.TriplesLetters\bin\Debug\02.LAB.TriplesLetters.exe.config
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\TechModuleC-\02.DataTypesTextAndOtherTypesVariables\02.LAB.TriplesLetters\obj\Debug\02.LAB.TriplesLetters.exe
+C:\Users\Йорето\Documents\Visual Studio 2015\Projects\02.TechModule\ProgramingFundametals\TechModuleC-\02.DataTypesTextAndOtherTypesVariables\02.LAB.TriplesLetters\obj\Debug\02.LAB.TriplesLetters.pdb
