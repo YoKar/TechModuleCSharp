@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.RegisteredUsers", "01.RegisteredUsers\01.RegisteredUsers.csproj", "{4AF9D144-1F6C-482F-A47A-5ECE23724073}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.LambadaExpressions", "01.LambadaExpressions\01.LambadaExpressions.csproj", "{7D15F423-3024-4852-BCA5-6880E5AAF7E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4AF9D144-1F6C-482F-A47A-5ECE23724073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4AF9D144-1F6C-482F-A47A-5ECE23724073}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4AF9D144-1F6C-482F-A47A-5ECE23724073}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4AF9D144-1F6C-482F-A47A-5ECE23724073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D15F423-3024-4852-BCA5-6880E5AAF7E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D15F423-3024-4852-BCA5-6880E5AAF7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D15F423-3024-4852-BCA5-6880E5AAF7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D15F423-3024-4852-BCA5-6880E5AAF7E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

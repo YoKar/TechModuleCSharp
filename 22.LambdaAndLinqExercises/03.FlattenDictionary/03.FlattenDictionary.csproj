@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4AF9D144-1F6C-482F-A47A-5ECE23724073}</ProjectGuid>
+    <ProjectGuid>{FF50070D-0238-499A-847E-6952D714198E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01.RegisteredUsers</RootNamespace>
-    <AssemblyName>01.RegisteredUsers</AssemblyName>
+    <RootNamespace>_03.FlattenDictionary</RootNamespace>
+    <AssemblyName>03.FlattenDictionary</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RegisteredUsers.cs" />
+    <Compile Include="FlattenDictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
