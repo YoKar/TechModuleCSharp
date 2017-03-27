@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.LambadaExpressions", "01.LambadaExpressions\01.LambadaExpressions.csproj", "{7D15F423-3024-4852-BCA5-6880E5AAF7E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.OrderedBankingSystem", "02.OrderedBankingSystem\02.OrderedBankingSystem.csproj", "{D377C54C-AEE2-4410-88DC-C65B76979115}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.LINQuistics", "03.LINQuistics\03.LINQuistics.csproj", "{9281F3CD-B694-4B34-B65C-5708BB028F34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7D15F423-3024-4852-BCA5-6880E5AAF7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D15F423-3024-4852-BCA5-6880E5AAF7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D15F423-3024-4852-BCA5-6880E5AAF7E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D377C54C-AEE2-4410-88DC-C65B76979115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D377C54C-AEE2-4410-88DC-C65B76979115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D377C54C-AEE2-4410-88DC-C65B76979115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D377C54C-AEE2-4410-88DC-C65B76979115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9281F3CD-B694-4B34-B65C-5708BB028F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9281F3CD-B694-4B34-B65C-5708BB028F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9281F3CD-B694-4B34-B65C-5708BB028F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9281F3CD-B694-4B34-B65C-5708BB028F34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
