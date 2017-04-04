@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{09F035A4-D387-46BA-AEAC-BFFA73F3FADE}</ProjectGuid>
+    <ProjectGuid>{EAD762CE-D51A-4F56-A8A7-E691D51E3513}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DemoTest</RootNamespace>
-    <AssemblyName>DemoTest</AssemblyName>
+    <RootNamespace>dempLinq</RootNamespace>
+    <AssemblyName>dempLinq</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

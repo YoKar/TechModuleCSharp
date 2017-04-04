@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.DefaultValues", "02.Defa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.FlattenDictionary", "03.FlattenDictionary\03.FlattenDictionary.csproj", "{FF50070D-0238-499A-847E-6952D714198E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.CottageScraper", "04.CottageScraper\04.CottageScraper.csproj", "{A69DD8F6-085F-4861-8160-C7B914F7D963}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FF50070D-0238-499A-847E-6952D714198E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF50070D-0238-499A-847E-6952D714198E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF50070D-0238-499A-847E-6952D714198E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A69DD8F6-085F-4861-8160-C7B914F7D963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A69DD8F6-085F-4861-8160-C7B914F7D963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A69DD8F6-085F-4861-8160-C7B914F7D963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A69DD8F6-085F-4861-8160-C7B914F7D963}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
