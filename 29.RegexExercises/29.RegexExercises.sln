@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.WordEncounter", "03.Word
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.HappinessIndex", "04.HappinessIndex\04.HappinessIndex.csproj", "{06C34BB4-A11D-4D40-A997-9812C3101111}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Commits", "05.Commits\05.Commits.csproj", "{1671A60B-5A71-4CD0-A765-8F826A4C4AC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{06C34BB4-A11D-4D40-A997-9812C3101111}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06C34BB4-A11D-4D40-A997-9812C3101111}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06C34BB4-A11D-4D40-A997-9812C3101111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1671A60B-5A71-4CD0-A765-8F826A4C4AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1671A60B-5A71-4CD0-A765-8F826A4C4AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1671A60B-5A71-4CD0-A765-8F826A4C4AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1671A60B-5A71-4CD0-A765-8F826A4C4AC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
