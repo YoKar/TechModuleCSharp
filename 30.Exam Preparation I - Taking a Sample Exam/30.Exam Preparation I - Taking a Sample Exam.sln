@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SinoTheWalker", "01.SinoTheWalker\01.SinoTheWalker.csproj", "{982F569D-8854-4DA1-8E92-7A78B63D5C19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.SoftUniKaraoke", "02.SoftUniKaraoke\02.SoftUniKaraoke.csproj", "{C331CD7C-FCCA-43AB-9006-DFFB8EA94638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.EnduranceRally", "03.EnduranceRally\03.EnduranceRally.csproj", "{6773BE3F-CCEB-4570-99F6-3349766B03CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.WinningTicket", "04.WinningTicket\04.WinningTicket.csproj", "{D2067676-BCDE-4341-8D7E-1E587B6B9E39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{982F569D-8854-4DA1-8E92-7A78B63D5C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{982F569D-8854-4DA1-8E92-7A78B63D5C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{982F569D-8854-4DA1-8E92-7A78B63D5C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C331CD7C-FCCA-43AB-9006-DFFB8EA94638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C331CD7C-FCCA-43AB-9006-DFFB8EA94638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C331CD7C-FCCA-43AB-9006-DFFB8EA94638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C331CD7C-FCCA-43AB-9006-DFFB8EA94638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6773BE3F-CCEB-4570-99F6-3349766B03CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6773BE3F-CCEB-4570-99F6-3349766B03CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6773BE3F-CCEB-4570-99F6-3349766B03CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6773BE3F-CCEB-4570-99F6-3349766B03CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2067676-BCDE-4341-8D7E-1E587B6B9E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2067676-BCDE-4341-8D7E-1E587B6B9E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2067676-BCDE-4341-8D7E-1E587B6B9E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2067676-BCDE-4341-8D7E-1E587B6B9E39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
