@@ -11,32 +11,38 @@ namespace _04.WinningTicket
     {
         static void Main(string[] args)
         {
-            var inputLine = Console.ReadLine().Split(',').Select(a => a.Trim()).ToArray();
-            var pattern = @"[@#$]{6,}(?:\w*|\d*)[@#$]{6,}";
-            var numOfPattern = @"([@#$]{6,})";
+            var pattern = @"([@#$^])\1{5,}";
             Regex regex = new Regex(pattern);
-            Regex numPat = new Regex(numOfPattern);
-            for (int i = 0; i < inputLine.Length; i++)
+            var inputLine = Console.ReadLine().Split(',').Select(a => a.Trim()).ToArray();
+
+            foreach (var item in inputLine)
             {
-                Match ticketsMatch = regex.Match(inputLine[i]);
-                
-                if (inputLine[i].Length<20)
+                var leftHalf = item.Substring(item.Length / 2);
+                var rightHalf = item.Remove(item.Length - item.Length / 2);
+                Match firstMatch = regex.Match(leftHalf);
+                Match secondMatch = regex.Match(rightHalf);
+                if (item.Length < 20||item.Length>20)
                 {
                     Console.WriteLine("invalid ticket");
                 }
-               else if (ticketsMatch!=Match.Empty)
+                else if (firstMatch.Success&&secondMatch.Success)
                 {
-                    Match num = numPat.Match(inputLine[i]);
-                    if (num.Groups[1].Length>6&& num.Groups[1].Length < 9)
+                    var ShortestMatch = Math.Min(firstMatch.Length, secondMatch.Length);
+                    
+                    if (ShortestMatch==10)
                     {
-                        Console.WriteLine("ticket \"{0}\" - {1}{2}", inputLine[i], num.Groups[1].Length,num.Value.Remove(num.Groups[1].Length-1));
+                        Console.WriteLine("ticket \"{0}\" - 10{1} Jackpot!",item, firstMatch.Value.Substring(firstMatch.Length - 1));
                     }
-                    else if (num.Groups[1].Length >10)
+                    else 
                     {
-                        Console.WriteLine("ticket \"{0}\" - {1}{2} Jackpot!", inputLine[i], num.Groups[1].Length, num.Value.Remove(num.Groups[1].Length - 1));
+                        Console.WriteLine("ticket \"{0}\" - {1}{2}", item, ShortestMatch, firstMatch.Value.Substring(firstMatch.Length - 1));
                     }
-                   
                 }
+                else  
+                {
+                    Console.WriteLine("ticket \"{0}\" - no match",item);
+                }
+                
             }
         }
     }
