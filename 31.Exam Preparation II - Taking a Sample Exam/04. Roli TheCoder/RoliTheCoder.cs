@@ -10,43 +10,53 @@ namespace _04.Roli_TheCoder
     {
         static void Main(string[] args)
         {
-            var events = Console.ReadLine();
-            Dictionary<string, Dictionary<string, SortedSet<string>>> DictionaryEvenets = new Dictionary<string, Dictionary<string, SortedSet<string>>>();
-            while (events!= "Time for Code")
+            var input = Console.ReadLine();
+            var eventsById = new Dictionary<int, string>();
+            var organizer = new Dictionary<string, List<string>>();
+
+            while (input != "Time for Code")
             {
-                if (!events.Contains("#"))
+
+                if (input.Contains("#"))
                 {
-                    continue;
-                }
-                var tokens = events.Split("#".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(a => a.Trim()).ToArray();
-                var ID = tokens[0];
-                var secondTokens = tokens[1].Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(a => a.Trim()).ToArray();
-                var Event = secondTokens[0];
-                if (!DictionaryEvenets.ContainsKey(ID))
-                {
-                    DictionaryEvenets[ID] = new Dictionary<string, SortedSet<string>>();
-                }
-                
-                for (int i = 1; i < secondTokens.Length; i++)
-                {
-                    if (!DictionaryEvenets[ID].ContainsKey(Event))
+                    var eventInfo = input
+                        .Split(new char[] { ' ', '#' }, StringSplitOptions.RemoveEmptyEntries)
+                        .ToList();
+
+                    var ID = int.Parse(eventInfo[0]);
+
+                    var eventName = eventInfo[1];
+
+                    var participants = new List<string>();
+
+                    for (int i = 2; i < eventInfo.Count; i++)
                     {
-                        DictionaryEvenets[ID][Event] =new SortedSet<string>();
+                        participants.Add(eventInfo[i]);
                     }
-                    DictionaryEvenets[ID][Event].Add(secondTokens[i]);
+
+
+                    if (!eventsById.ContainsKey(ID))
+                    {
+                        eventsById.Add(ID, eventName);
+                        organizer.Add(eventName, participants);
+                    }
+
+                    else if (eventsById[ID] == eventName)
+                    {
+                        organizer[eventName].AddRange(participants);
+                    }
                 }
-                events = Console.ReadLine();
+
+                input = Console.ReadLine();
             }
-           
-            foreach (var item in DictionaryEvenets)
+
+
+            foreach (var events in organizer.OrderByDescending(x => x.Value.Distinct().Count()).ThenBy(x => x.Key))
             {
-                foreach (var Part in item.Value)
+                Console.WriteLine($"{events.Key} - {events.Value.Distinct().Count()}");
+                foreach (var participant in events.Value.OrderBy(x => x).Distinct())
                 {
-                    Console.WriteLine("{0} - {1}",Part.Key,Part.Value.Count);
-                    foreach (var count in Part.Value)
-                    {
-                        Console.WriteLine(count);
-                    }
+                    Console.WriteLine(participant);
                 }
             }
         }
