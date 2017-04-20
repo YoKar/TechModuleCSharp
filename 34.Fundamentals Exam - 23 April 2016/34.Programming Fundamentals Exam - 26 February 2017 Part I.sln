@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.HornetWings", "01.MelrahShake\01.HornetWings.csproj", "{325082E9-A809-4328-AD95-C5CD9E2A4120}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.HornetComm", "02.Crossfire\02.HornetComm.csproj", "{2FFDDF12-8D70-484C-9CE6-C37C04963A01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{325082E9-A809-4328-AD95-C5CD9E2A4120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{325082E9-A809-4328-AD95-C5CD9E2A4120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{325082E9-A809-4328-AD95-C5CD9E2A4120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{325082E9-A809-4328-AD95-C5CD9E2A4120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FFDDF12-8D70-484C-9CE6-C37C04963A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FFDDF12-8D70-484C-9CE6-C37C04963A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FFDDF12-8D70-484C-9CE6-C37C04963A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FFDDF12-8D70-484C-9CE6-C37C04963A01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
