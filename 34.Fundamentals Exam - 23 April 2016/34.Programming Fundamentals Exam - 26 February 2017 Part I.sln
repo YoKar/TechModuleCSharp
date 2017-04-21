@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.HornetWings", "01.Melrah
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.HornetComm", "02.Crossfire\02.HornetComm.csproj", "{2FFDDF12-8D70-484C-9CE6-C37C04963A01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.HornetAssault", "03.HornetAssault\03.HornetAssault.csproj", "{671F4D16-4A4B-40A3-A1A1-6C962DD53BB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.HornetArmada", "04.HornetArmada\04.HornetArmada.csproj", "{FAAEF846-B80B-426C-B85D-6A201F850197}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{2FFDDF12-8D70-484C-9CE6-C37C04963A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FFDDF12-8D70-484C-9CE6-C37C04963A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FFDDF12-8D70-484C-9CE6-C37C04963A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{671F4D16-4A4B-40A3-A1A1-6C962DD53BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{671F4D16-4A4B-40A3-A1A1-6C962DD53BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{671F4D16-4A4B-40A3-A1A1-6C962DD53BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{671F4D16-4A4B-40A3-A1A1-6C962DD53BB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAAEF846-B80B-426C-B85D-6A201F850197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAEF846-B80B-426C-B85D-6A201F850197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAEF846-B80B-426C-B85D-6A201F850197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAAEF846-B80B-426C-B85D-6A201F850197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

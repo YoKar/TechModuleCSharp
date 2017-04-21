@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace _02.Crossfire
@@ -15,25 +16,22 @@ namespace _02.Crossfire
             
             var BroadCastList = new List<string>();
             var MeesegList = new List<string>();
+            var patternMessege = @"^(?:([0-9]+) \<\-\> ([a-z0-9 A-Z]+))$";
+            var patternBroadcast = @"^\D+\<\-\> ([a-zA-Z0-9]+)$";
             while (inputLine!= "Hornet is Green")
             {
                 var tokens = inputLine.Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries).ToArray();
-                if (tokens.Length>3|| tokens[2].Contains('@')|| tokens[2].Contains('!')|| tokens[2].Contains('$'))
+                Regex regexMesege = new Regex(patternMessege);
+                Regex regexBroadcast = new Regex(patternBroadcast);
+                Match MatchMesege = regexMesege.Match(inputLine);
+                Match MatchBroadcast = regexBroadcast.Match(inputLine);
+                if (MatchMesege.Success)
                 {
-                    inputLine = Console.ReadLine();
-                    continue;
-                }
-               
-                var num = 0;
-                if (int.TryParse(tokens[0],out num))
-                {
-                    var FirstQuery =tokens[0].ToList();
-                    FirstQuery.Reverse();
+                    var FirstQuery = MatchMesege.Groups[1].Value.Reverse();
                     var secondQuery = tokens[2];
                     MeesegList.Add(string.Join("", FirstQuery) + " -> " + secondQuery);
-                   
                 }
-                else
+                else if (MatchBroadcast.Success)
                 {
                     var secondQuery = new List<char>();
                     var FirstQuery = tokens[0];
@@ -58,6 +56,11 @@ namespace _02.Crossfire
                     }
 
                     BroadCastList.Add(string.Join("", CorectedList)+" -> "+FirstQuery);
+                }
+                else
+                {
+                    inputLine = Console.ReadLine();
+                    continue;
                 }
                 inputLine = Console.ReadLine();
             }
