@@ -10,98 +10,82 @@ namespace _02.CommandInterpreter
     {
         static void Main(string[] args)
         {
-
-            var inputLine = Console.ReadLine().Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries).ToList();
-            var finalList = new List<string>();
-            finalList = inputLine;
-             var command = Console.ReadLine();
-            while (true)
+            var inputline = Console.ReadLine().Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries).ToList();
+            var command = Console.ReadLine().Split().ToArray();
+            while (!command[0].Equals("end"))
             {
+                List<string> TempList = new List<string>();
+                var start = 0;
+                var count = 0;
 
-                if (command == "end")
+                switch (command[0])
                 {
+                    case "reverse":
+                        start = int.Parse(command[2]);
+                        count = int.Parse(command[4]);
+                        if (start < 0 || start>=inputline.Count||count<0||start+count>inputline.Count)
+                        {
+                            Console.WriteLine("Invalid input parameters.");
+                            break;
+                        }
+                        TempList = inputline.
+                            Skip(start).
+                            Take(count).
+                            Reverse().
+                            ToList();
+                        inputline.RemoveRange(start, count);
+                        inputline.InsertRange(start, TempList);
+                        break;
+                    case "sort":
+                        start = int.Parse(command[2]);
+                         count = int.Parse(command[4]);
+                        if (start < 0 || start >= inputline.Count || count < 0 || start + count >inputline.Count)
+                        {
+                            Console.WriteLine("Invalid input parameters.");
+                            break;
+                        }
+                        TempList = inputline.
+                            Skip(start).
+                            Take(count).
+                            OrderBy(str=>str).
+                            ToList();
+                        inputline.RemoveRange(start, count);
+                        inputline.InsertRange(start,TempList);
+                        break;
+                    case "rollLeft":
+                        count = int.Parse(command[1]);
+                        if (count < 0)
+                        {
+                            Console.WriteLine("Invalid input parameters.");
+                            break;
+                        }
+                        for (int i = 0; i < count%inputline.Count ; i++)
+                        {
+                           
+                            var firstChar = inputline[0];
+                            inputline.RemoveAt(0);
+                            inputline.Add(firstChar);
+                        }
+                        break;
+                    case "rollRight":
 
-                    break;
+                        count = int.Parse(command[1]);
+                        if (count<0)
+                        {
+                            Console.WriteLine("Invalid input parameters.");
+                            break;
+                        }
+                        for (int i = 0; i < count%inputline.Count; i++)
+                        {
+                            var lastChar = inputline[inputline.Count-1];
+                            inputline.RemoveAt(inputline.Count - 1);
+                            inputline.Insert(0,lastChar);
+                        }
+                        break;
                 }
-                var tokens = command.Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries).ToArray();
-
-                if (tokens[0] == "reverse" || tokens[0] == "sort")
-                {
-                    if (int.Parse(tokens[2]) < 0 || int.Parse(tokens[2]) > inputLine.Count - 1 || int.Parse(tokens[4]) > inputLine.Count - 1 || int.Parse(tokens[4]) < 0)
-                    {
-                        Console.WriteLine("Invalid input parameters.");
-                        command = Console.ReadLine();
-                        continue;
-                    }
-                    var startPosiction = int.Parse(tokens[2]);
-                    var endPosition = int.Parse(tokens[4]);
-                    if (tokens[0] == "reverse")
-                    {
-                        var ReversetList = inputLine.GetRange(startPosiction, endPosition);
-                        ReversetList.Reverse();
-                        finalList.RemoveRange(startPosiction, endPosition);
-                        finalList.InsertRange(startPosiction, ReversetList);
-                    }
-                    else
-                    {
-                        var SortedList = inputLine.GetRange(startPosiction, endPosition);
-                        SortedList.Sort();
-                        finalList.RemoveRange(startPosiction, endPosition);
-                        finalList.InsertRange(startPosiction, SortedList);
-                    }
-                }
-                if (tokens[0] == "rollLeft" || tokens[0] == "rollRight")
-                {
-                    if (int.Parse(tokens[1]) < 0 )
-                    {
-                        Console.WriteLine("Invalid input parameters.");
-                        command = Console.ReadLine();
-                        continue;
-                    }
-                    var count = int.Parse(tokens[1]);
-
-                    if (tokens[0] == "rollLeft")
-                    {
-                        count %= finalList.Count;
-                        var LeftTakenIndexes = finalList.GetRange(0, count);
-                        for (int i = count; i < finalList.Count; i++)
-                        {
-                            finalList[i - count] = finalList[i];
-                        }
-
-                        for (int i = finalList.Count - count; i < finalList.Count; i++)
-                        {
-                            finalList[i] = default(string);
-
-                        }
-                        var index = finalList.IndexOf(null);
-                        finalList.InsertRange(index, LeftTakenIndexes);
-                        index = finalList.IndexOf(null);
-                        finalList.RemoveRange(index, finalList.Count - index);
-                    }
-                    else
-                    {
-                        count %= finalList.Count;
-                        var RightTakenIndexes = finalList.GetRange((finalList.Count - count), count);
-                        for (int i = finalList.Count - count - 1; i >= 0; i--)
-                        {
-                            finalList[i + count] = finalList[i];
-                        }
-
-                        for (int i = 0; i < count; i++)
-                        {
-                            finalList[i] = default(string);
-                        }
-                        var index = finalList.IndexOf(null);
-                        finalList.InsertRange(index, RightTakenIndexes);
-                        index = finalList.IndexOf(null);
-
-                        finalList.RemoveRange(index, count);
-                    }
-                }
-                command = Console.ReadLine();
+                command = Console.ReadLine().Split().ToArray();
             }
-            Console.WriteLine("[{0}]", string.Join(", ", finalList));
+            Console.WriteLine("[{0}]",string.Join(", ",inputline));
         }
     }
 }
