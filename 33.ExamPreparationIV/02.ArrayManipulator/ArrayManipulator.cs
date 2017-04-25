@@ -10,260 +10,184 @@ namespace _02.ArrayManipulator
     {
         static void Main(string[] args)
         {
-            var arr = Console.ReadLine().Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries).ToArray();
+            var inputArray = Console.ReadLine().Split().Select(int.Parse).ToList();
             while (true)
             {
-                var inputLine = Console.ReadLine();
-                if (inputLine == "end")
+                var command = Console.ReadLine();
+                if (command == "end")
                 {
                     break;
                 }
-                var command = inputLine.Split(' ');
-                switch (command[0])
+                var tokens = command.Split().ToArray();
+                switch (tokens[0])
                 {
                     case "exchange":
-                        arr = Exchange(arr, int.Parse(command[1]));
+                        if (int.Parse(tokens[1]) >= inputArray.Count || int.Parse(tokens[1]) < 0)
+                        {
+                            Console.WriteLine("Invalid index");
+                        }
+                        else
+                        {
+                            inputArray = ExchangeMethotd(inputArray, int.Parse(tokens[1]));
+
+                        }
                         break;
                     case "max":
-                        MaxMeth(arr, command[1]);
+                        MaxEvenOrOddMethod(tokens[0],tokens[1],inputArray);
                         break;
                     case "min":
-                        MinMeth(arr, command[1]);
+                        minEvenOrOddMethod(tokens[1], inputArray);
                         break;
                     case "first":
-                        FirstCounterMeth(arr, command[1], command[2]);
+                        FirstEvenOrOddMethod(int.Parse(tokens[1]), tokens[2], inputArray);
                         break;
                     case "last":
-                        LastCounterMeth(arr, command[1], command[2]);
+                        LastEvenOrOddMethod(int.Parse(tokens[1]), tokens[2], inputArray);
                         break;
                 }
-
             }
-            Console.WriteLine("[{0}]", string.Join(", ", arr));
+            Console.WriteLine("[{0}]",string.Join(", ",inputArray));
         }
 
-        private static void LastCounterMeth(string[] arr, string index, string EvenOrOdd)
+        private static void LastEvenOrOddMethod(int count, string EvenOrODD, List<int> arr)
         {
-            var list = new List<int>();
-            var theIndex = int.Parse(index);
-            if (theIndex < 0 || theIndex > arr.Length)
+            if (count > arr.Count )
             {
                 Console.WriteLine("Invalid count");
             }
             else
             {
-                if (EvenOrOdd == "even")
+                if (EvenOrODD == "even")
                 {
-                    foreach (var item in arr)
-                    {
-                        if (int.Parse(item) % 2 == 0)
-                        {
-                            list.Add(int.Parse(item));
-                        }
-                    }
-                    if (list.Count == 0)
+                    var evenNums = arr.Where(a => a % 2 == 0).OrderByDescending(a=>a).ToList();
+                    if (evenNums.Count == 0)
                     {
                         Console.WriteLine("[]");
                     }
                     else
                     {
-                        list.Reverse();
-                        var last = list.Take(theIndex);
-                        last.Reverse();
-                        Console.WriteLine("[{0}]", string.Join(", ", last));
+                        Console.WriteLine("[{0}]", string.Join(", ", evenNums.Take(count)));
                     }
                 }
-                else if (EvenOrOdd == "odd")
+                else
                 {
-                    foreach (var item in arr)
-                    {
-                        if (int.Parse(item) % 2 == 1)
-                        {
-                            list.Add(int.Parse(item));
-                        }
-                    }
-                    if (list.Count == 0)
+                    var evenNums = arr.Where(a => a % 2 == 1).OrderByDescending(a => a).ToList();
+                    if (evenNums.Count == 0)
                     {
                         Console.WriteLine("[]");
                     }
                     else
                     {
-                        list.Reverse();
-                        var last = list.Take(theIndex);
-                        last.Reverse();
-                        Console.WriteLine("[{0}]", string.Join(", ", last));
+                        Console.WriteLine("[{0}]", string.Join(", ", evenNums.Take(count)));
                     }
                 }
-
             }
         }
 
-        private static void FirstCounterMeth(string[] arr, string index, string EvenOrOdd)
+        private static void FirstEvenOrOddMethod(int count, string EvenOrODD,  List<int> arr)
         {
-            var list = new List<int>();
-            var theIndex = int.Parse(index);
-            if (theIndex < 0 || theIndex > arr.Length)
+            if (count>arr.Count)
             {
                 Console.WriteLine("Invalid count");
             }
             else
             {
-                if (EvenOrOdd == "even")
+                if (EvenOrODD=="even")
                 {
-                    foreach (var item in arr)
-                    {
-                        if (int.Parse(item)%2==0)
-                        {
-                            list.Add(int.Parse(item));
-                        }
-                    }
-                    if (list.Count==0)
+                    var evenNums = arr.Where(a => a % 2 == 0).ToList();
+                    if (evenNums.Count==0)
                     {
                         Console.WriteLine("[]");
                     }
                     else
                     {
-                        Console.WriteLine("[{0}]",string.Join(", ",list.Take(theIndex)));
+                        Console.WriteLine("[{0}]", string.Join(", ", evenNums.Take(count)));
                     }
-                }
-                else if (EvenOrOdd == "odd")
+                  }
+                else
                 {
-                    foreach (var item in arr)
-                    {
-                        if (int.Parse(item) % 2 == 1)
-                        {
-                            list.Add(int.Parse(item));
-                        }
-                    }
-                    if (list.Count == 0)
+                    var evenNums = arr.Where(a => a % 2 == 1).ToList();
+                    if (evenNums.Count == 0)
                     {
                         Console.WriteLine("[]");
                     }
                     else
                     {
-                        Console.WriteLine("[{0}]", string.Join(", ", list.Take(theIndex)));
+                        Console.WriteLine("[{0}]", string.Join(", ", evenNums.Take(count)));
                     }
-                }
-
-            }
-        }
-
-        private static void MinMeth(string[] arr, string EvenOrOdd)
-        {
-            var result = new List<int>();
-            var theIndex = 0;
-
-            if (EvenOrOdd == "odd")
-            {
-                foreach (var item in arr)
-                {
-                    if (int.Parse(item) % 2 == 1)
-                    {
-                        result.Add(int.Parse(item));
-                    }
-
-                }
-                if (result.Any())
-                {
-                    theIndex = result.Where(a => a % 2 == 1).Min();
-                    string resultstring = Convert.ToString(theIndex);
-                    Console.WriteLine(Array.LastIndexOf(arr, resultstring));
-                }
-                else
-                {
-                    Console.WriteLine("No matches");
-                }
-
-            }
-            else if (EvenOrOdd == "even")
-            {
-                foreach (var item in arr)
-                {
-                    if (int.Parse(item) % 2 == 0)
-                    {
-                        result.Add(int.Parse(item));
-                    }
-
-                }
-                if (result.Any())
-                {
-                    theIndex = result.Where(a => a % 2 == 0).Min();
-                    string resultstring = Convert.ToString(theIndex);
-                    Console.WriteLine(Array.LastIndexOf(arr, resultstring));
-                }
-                else
-                {
-                    Console.WriteLine("No matches");
                 }
             }
         }
 
-        private static void MaxMeth(string[] arr, string EvenOrOdd)
+        private static void minEvenOrOddMethod(string EvenOrOdd, List<int> arr)
         {
-            var result = new List<int>();
-            var theIndex = 0;
-
-            if (EvenOrOdd == "odd")
+            if (EvenOrOdd == "even")
             {
-                foreach (var item in arr)
-                {
-                    if (int.Parse(item) % 2 == 1)
-                    {
-                        result.Add(int.Parse(item));
-                    }
-
-                }
-                if (result.Any())
-                {
-                    theIndex = result.Where(a => a % 2 == 1).Max();
-                    string resultstring = Convert.ToString(theIndex);
-                    Console.WriteLine(Array.LastIndexOf(arr, resultstring));
-                }
-                else
+                var evenList = arr.Where(a => a % 2 == 0).ToList();
+                if (evenList.Count == 0)
                 {
                     Console.WriteLine("No matches");
                 }
-
-            }
-            else if (EvenOrOdd == "even")
-            {
-                foreach (var item in arr)
-                {
-                    if (int.Parse(item) % 2 == 0)
-                    {
-                        result.Add(int.Parse(item));
-                    }
-
-                }
-                if (result.Any())
-                {
-                    theIndex = result.Where(a => a % 2 == 0).Max();
-                    string resultstring =Convert.ToString( theIndex);
-                    Console.WriteLine(Array.LastIndexOf( arr,resultstring));
-                }
                 else
+                {
+                    var maxNum = evenList.Min();
+                    Console.WriteLine(arr.LastIndexOf(maxNum));
+                }
+            }
+            else
+            {
+
+                var evenList = arr.Where(a => a % 2 == 1).ToList();
+                if (evenList.Count == 0)
                 {
                     Console.WriteLine("No matches");
                 }
+                else
+                {
+                    var maxNum = evenList.Min();
+                    Console.WriteLine(arr.LastIndexOf(maxNum));
+                }
             }
-
-
         }
 
-        private static string[] Exchange(string[] arr, int index)
+        private static void MaxEvenOrOddMethod(string Max, string EvenOrOdd, List<int> arr)
         {
-            if (index < 0 || index > arr.Length - 1)
+            if (EvenOrOdd=="even")
             {
-                Console.WriteLine("Invalid index");
-                return arr;
+                var evenList = arr.Where(a => a % 2 == 0).ToList();
+                if (evenList.Count==0)
+                {
+                    Console.WriteLine("No matches");
+                }
+                else
+                {
+                    var maxNum = evenList.Max();
+                    Console.WriteLine(arr.LastIndexOf(maxNum));
+                }
             }
+            else
+            {
 
-            var leftSide = arr.Take(index + 1);
-            var rightSide = arr.Skip(index + 1);
-            arr = rightSide.Concat(leftSide).ToArray();
+                var evenList = arr.Where(a => a % 2 == 1).ToList();
+                if (evenList.Count == 0)
+                {
+                    Console.WriteLine("No matches");
+                }
+                else
+                {
+                    var maxNum = evenList.Max();
+                    Console.WriteLine(arr.LastIndexOf(maxNum));
+                }
+            }
+        }
+
+        private static List<int> ExchangeMethotd(List<int> arr, int index)
+        {
+
+            var leftSide = arr.Take(index + 1).ToList();
+            arr.RemoveRange(0, index + 1);
+            arr.InsertRange(arr.Count, leftSide);
             return arr;
-
-
         }
     }
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ArrayManipulator", "02.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.FootballStandings", "03.FootballStandings\03.FootballStandings.csproj", "{BE43A42C-EEF7-41E7-9287-744EBB5A8BFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Cubic’sMessages", "04.Cubic’sMessages\04.Cubic’sMessages.csproj", "{56A95DDE-A52F-47CD-BC2C-CCBFB8BE11D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BE43A42C-EEF7-41E7-9287-744EBB5A8BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE43A42C-EEF7-41E7-9287-744EBB5A8BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE43A42C-EEF7-41E7-9287-744EBB5A8BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A95DDE-A52F-47CD-BC2C-CCBFB8BE11D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A95DDE-A52F-47CD-BC2C-CCBFB8BE11D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A95DDE-A52F-47CD-BC2C-CCBFB8BE11D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A95DDE-A52F-47CD-BC2C-CCBFB8BE11D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
