@@ -11,84 +11,60 @@ namespace _02.Crossfire
     {
         static void Main(string[] args)
         {
-            var inputLine = Console.ReadLine();
-            
-            
-            var BroadCastList = new List<string>();
-            var MeesegList = new List<string>();
-            var patternMessege = @"^(?:([0-9]+) \<\-\> ([a-z0-9 A-Z]+))$";
-            var patternBroadcast = @"^\D+\<\-\> ([a-zA-Z0-9]+)$";
-            while (inputLine!= "Hornet is Green")
+           
+            var MessegesList = new List<string>();
+            var BroadcastList = new List<string>();
+            while (true)
             {
-                var tokens = inputLine.Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries).ToArray();
-                Regex regexMesege = new Regex(patternMessege);
-                Regex regexBroadcast = new Regex(patternBroadcast);
-                Match MatchMesege = regexMesege.Match(inputLine);
-                Match MatchBroadcast = regexBroadcast.Match(inputLine);
-                if (MatchMesege.Success)
+                var inputLine = Console.ReadLine();
+                if (inputLine == "Hornet is Green")
                 {
-                    var FirstQuery = MatchMesege.Groups[1].Value.Reverse();
-                    var secondQuery = tokens[2];
-                    MeesegList.Add(string.Join("", FirstQuery) + " -> " + secondQuery);
+                    break;
                 }
-                else if (MatchBroadcast.Success)
+                var tokens = inputLine.Split(new[] { " <-> " }, StringSplitOptions.RemoveEmptyEntries);
+                if (tokens.Length != 2)
                 {
-                    var secondQuery = new List<char>();
-                    var FirstQuery = tokens[0];
-                    foreach (var charr in tokens[2])
+                    continue;
+                }
+                var firstQuery = tokens[0];
+                var secondQuerry = tokens[1];
+                if (firstQuery.All(char.IsDigit)
+                    && secondQuerry.All(char.IsLetterOrDigit))
+                {
+                    string reversedMeseges = new string(firstQuery.Reverse().ToArray());
+                    MessegesList.Add($"{reversedMeseges} -> {secondQuerry}");
+                }
+                else if (firstQuery.All(a => !char.IsDigit(a)) &&
+                    secondQuerry.All(char.IsLetterOrDigit))
+                {
+                    var transformedChars = new StringBuilder();
+                    foreach (var item in secondQuerry)
                     {
-                        secondQuery.Add(charr);
-                    }
-                    
-                    var CorectedList = new List<char>();
-                    foreach (var letter in secondQuery)
-                    {
-                        if (char.IsUpper(letter))
+                        if (char.IsUpper(item))
                         {
-                            var let = char.ToLower(letter);
-                            CorectedList.Add(let);
+                            transformedChars.Append(item.ToString().ToLower());
+                        }
+                        else if (char.IsLower(item))
+                        {
+                            transformedChars.Append(item.ToString().ToUpper());
                         }
                         else
                         {
-                            var up = char.ToUpper(letter);
-                            CorectedList.Add(up);
+                            transformedChars.Append(item);
                         }
                     }
-
-                    BroadCastList.Add(string.Join("", CorectedList)+" -> "+FirstQuery);
+                    BroadcastList.Add($"{transformedChars} -> {firstQuery}");
                 }
-                else
-                {
-                    inputLine = Console.ReadLine();
-                    continue;
-                }
-                inputLine = Console.ReadLine();
+               
             }
             Console.WriteLine("Broadcasts:");
-            if (BroadCastList.Count>0)
-            {
-               
-                foreach (var item in BroadCastList)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-            else
-            {
-                Console.WriteLine("None");
-            }
+            Console.WriteLine(BroadcastList.Any()
+                ? string.Join(Environment.NewLine, BroadcastList)
+                : "None");
             Console.WriteLine("Messages:");
-            if (MeesegList.Count>0)
-            {
-                foreach (var item in MeesegList)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-            else
-            {
-                Console.WriteLine("None");
-            }
+            Console.WriteLine(MessegesList.Any()
+                ? string.Join(Environment.NewLine, MessegesList)
+                : "None");
         }
     }
 }
