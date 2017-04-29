@@ -10,46 +10,41 @@ namespace _03.HornetAssault
     {
         static void Main(string[] args)
         {
-            var BeeHive = Console.ReadLine().Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(long.Parse).ToList();
-            var HornetsPower = Console.ReadLine().Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(long.Parse).ToList();
-            var counter = BeeHive.Count;
-
-            long SumOfHornetPwoer = HornetsPower.Sum();
-            for (int i = 0; i < BeeHive.Count; i++)
+            var beehives = Console.ReadLine().Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(long.Parse).ToList();
+            var hornets = Console.ReadLine().Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(long.Parse).ToList();
+            var power = hornets.Sum();
+            var firstHorn = 0;
+            for (int i = 0; i < beehives.Count; i++)
             {
-                if (HornetsPower.Count <= 0)
+                var bees = beehives[i];
+                
+                if (bees>=power)
                 {
-                    break;
-                }
-                if (SumOfHornetPwoer <= BeeHive[i])
-                {
-                    BeeHive[i] -= HornetsPower.Sum();
-                    HornetsPower.RemoveAt(0);
+                    beehives[i] -= power;
+                    if (firstHorn<hornets.Count)
+                    {
+                        power -= hornets[firstHorn];
+                        firstHorn++;
+                    }
+                    
                 }
                 else
                 {
-                    BeeHive[i] = 0;
+                    beehives[i] -= power;
                 }
-                SumOfHornetPwoer = HornetsPower.Sum();
+                if (hornets.Count<=0)
+                {
+                    break;
+                }
             }
-
-            var NoneZero = BeeHive.Where(e => e != 0).ToList();
-            //for (int i = 0; i < BeeHive.Count; i++)
-            //{
-            //    if (BeeHive[i] <= 0)
-            //    {
-            //        BeeHive.Remove(i);
-            //        i--;
-            //    }
-            //}
-            if (NoneZero.Count > 0)
+            var leftBees = beehives.Where(a => a > 0).ToList();
+            if (beehives.Any(a=>a>0))
             {
-
-                Console.WriteLine(string.Join(" ", NoneZero));
+                Console.WriteLine(string.Join(" ",beehives.Where(a=>a>0)));
             }
             else
             {
-                Console.WriteLine(string.Join(" ", HornetsPower));
+                Console.WriteLine(string.Join(" ",hornets.Skip(firstHorn)));
             }
         }
     }
